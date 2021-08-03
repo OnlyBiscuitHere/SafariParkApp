@@ -3,8 +3,15 @@
   <Class Name="SafariParkApp.Person">
     <Position X="3.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEAAAAAAAAAAAAAAEEAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAEAAAAAAAAAAAEAAAAAAAAAAAAgIAAAAAAAAAAg=</HashCode>
       <FileName>Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SafariParkApp.Vehicle">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAoAAAAAgEAAAAAQBAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vehicle.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

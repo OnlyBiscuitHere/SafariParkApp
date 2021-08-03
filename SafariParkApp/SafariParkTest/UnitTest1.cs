@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using SafariParkApp;
+using System;
 
 namespace SafariParkTest
 {
@@ -34,6 +35,28 @@ namespace SafariParkTest
             Assert.AreEqual(subject.x, expectedX);
             Assert.AreEqual(subject.y, expectedY);
             Assert.AreEqual(subject.z, expectedZ);
+        }
+        [Test]
+        public void WhenADefaultVehicleMovesTwiceItsPositionIs20()
+        {
+            Vehicle v = new Vehicle();
+            var result = v.Move(2);
+            Assert.AreEqual(20, v.Position);
+            Assert.AreEqual("Moving along 2 times", result);
+        }
+        [Test]
+        public void WhenAVehicleWithSpeed40IsMovedOnceItsPosition40()
+        {
+            Vehicle v = new Vehicle(5, 40);
+            var result = v.Move();
+            Assert.AreEqual(40, v.Position);
+            Assert.AreEqual("Moving along", result);
+        }
+        [Test]
+        public void WhenNumPassengersExceedsCapacityThrowsException()
+        {
+            Vehicle v = new Vehicle();
+            Assert.That(() => v.NumPassengers = 600, Throws.TypeOf<ArgumentException>());
         }
     }
 }
