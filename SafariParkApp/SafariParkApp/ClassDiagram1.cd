@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="SafariParkApp.Person">
-    <Position X="3.75" Y="1.5" Width="1.5" />
+    <Position X="0.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAEAAAAAAAAAAAEAAAAAAAAAAAAgIAAAAAAAAAAg=</HashCode>
       <FileName>Person.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SafariParkApp.Vehicle">
-    <Position X="7.25" Y="1.75" Width="1.5" />
+    <Position X="5.25" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAoAAAAAgEAAAAAQBAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Vehicle.cs</FileName>

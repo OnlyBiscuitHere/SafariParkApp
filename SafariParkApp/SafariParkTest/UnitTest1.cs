@@ -55,7 +55,7 @@ namespace SafariParkTest
         [Test]
         public void WhenNumPassengersExceedsCapacityThrowsException()
         {
-            Vehicle v = new Vehicle();
+            Vehicle v = new Vehicle(1,10);
             Assert.That(() => v.NumPassengers = 600, Throws.TypeOf<ArgumentException>());
         }
     }
