@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SafariParkApp
 {
-    public class Vehicle
+    public class Vehicle : IMoveable
     {
         private int _capacity;
         private int _numPassengers;
@@ -17,7 +17,7 @@ namespace SafariParkApp
                 { throw new ArgumentException(); }
                 _numPassengers= value; } }
 
-        public int Position { get; private set; }
+        public int Position { get; set; }
 
         public int Speed { get; init; }
         public Vehicle() 
@@ -35,16 +35,20 @@ namespace SafariParkApp
             }
         }
 
-        public string Move(int times)
+        public virtual string Move(int times)
         {
             Position = Speed * times;
             return $"Moving along {times} times";
         }
 
-        public string Move()
+        public virtual string Move()
         {
-            Position = Speed;
+            Position += Speed;
             return "Moving along";
+        }
+        public override string ToString()
+        {
+            return base.ToString() + $"capacity: {_capacity} passengers: {NumPassengers} speed: {Speed} position: {Position}";
         }
     }
 }

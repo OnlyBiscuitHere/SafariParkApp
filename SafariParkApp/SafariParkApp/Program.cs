@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SafariParkApp
 {
@@ -6,34 +7,108 @@ namespace SafariParkApp
     {
         static void Main(string[] args)
         {
-            //Person martin = new Person("Martin", "Beard", 21);
-            //Console.WriteLine(martin.GetFullName());
-            //Person cathy = new Person("Cathy", "French", 35);
-            //Console.WriteLine(cathy.GetFullName());
-            //Console.WriteLine(cathy.Age);
+            //person martin = new person("martin", "beard", 21);
+            //console.writeline(martin.getfullname());
+            //person cathy = new person("cathy", "french", 35);
+            //console.writeline(cathy.getfullname());
+            //console.writeline(cathy.age);
 
-            //Person nish = new Person("Nishant");
-            //Person abiola = new Person("Abiola", "Kuku");
+            //person nish = new person("nishant");
+            //person abiola = new person("abiola", "kuku");
 
-            //cathy.Age = 30;
-            //Console.WriteLine($"Cathy is now {cathy.Age}");
+            //cathy.age = 30;
+            //console.writeline($"cathy is now {cathy.age}");
 
-            //var zoe = new Person("Zoe", "") { Age = 31 };
+            //var zoe = new person("zoe", "") { age = 31 };
 
-            var list = new ShoppingList() { Bread = 2, Potato = 6, Milk = 2 };
+            //var list = new ShoppingList() { bread = 2, potato = 6, milk = 2 };
 
-            var paula = new Person() { FirstName = "Paula", LastName = "Kendra", Age = 23 };
+            //var paula = new person() { firstname = "paula", lastname = "kendra", age = 23 };
 
-            Person anotherPerson;
+            //person anotherperson;
 
-            Point3D p = new Point3D(3, 6, 2);
-            var p2 = new Point3D();
-            Point3D p3;
-            Point3D p4 = new Point3D(1, 7);
+            //point3d p = new point3d(3, 6, 2);
+            //var p2 = new point3d();
+            //point3d p3;
+            //point3d p4 = new point3d(1, 7);
 
-            Person john = new Person("John", "Doe") { Age = 20 };
-            Point3D pt3D = new Point3D(5, 8, 2);
-            DemoMethod(pt3D, john);
+            //person john = new person("john", "doe") { age = 20 };
+            //point3d pt3d = new point3d(5, 8, 2);
+            //demomethod(pt3d, john);
+
+            //Hunter h = new Hunter("Marion", "Jones", "Canon") { Age = 32 };
+            //Console.WriteLine(h.Age);
+            //Console.WriteLine(h.Shoot());
+            //Hunter h2 = new Hunter();
+            //Console.WriteLine(h2.Shoot());
+            //Console.WriteLine($"h Equals h2? {h.Equals(h2)}");
+            //Console.WriteLine($"h HashCode: {h.GetHashCode()}");
+            //Console.WriteLine($"h Type: {h.GetType()}" );
+            //Console.WriteLine($"h ToString: {h.ToString()}");
+            //Console.WriteLine($"h: {h}");
+
+            //Rectangle r = new Rectangle(2, 6);
+            //Console.WriteLine(r.CalculateArea());
+
+            //Aeroplane a = new Aeroplane(200, 100, "JetsRUs") { NumPassengers = 150 };
+            //a.Ascend(500);
+            //Console.WriteLine(a.Move(3));
+            //Console.WriteLine(a);
+            //a.Descend(200);
+            //Console.WriteLine(a.Move());
+            //a.Move();
+            //Console.WriteLine(a) ;
+
+            //List<object> gameObjects = new List<object>()
+            //{
+            //    new Person("Cathy", "French"),
+            //    new Aeroplane(400, 200, "Booing") { NumPassengers = 55 },
+            //    new Vehicle(12, 20) { NumPassengers = 6 },
+            //    new Hunter("Henry", "Hodgkins", "Pentax")
+            //};
+            //foreach (var gameObj in gameObjects)
+            //{
+            //    Console.WriteLine(gameObj);
+            //}
+
+            //Person yolanda = new Person("Yolanda", "Young");
+            //Hunter henry = new Hunter("Henry", "Hodgkins", "Pentax");
+            //SpartaWrite(yolanda);
+            //SpartaWrite(henry);
+            //List<IMoveable> moveableObjects = new List<IMoveable>()
+            //{
+            //    new Person("Cathy", "French"),
+            //    new Aeroplane(400, 200, "Booing") { NumPassengers = 55 },
+            //    new Vehicle(12, 20) { NumPassengers = 6 },
+            //    new Hunter("Henry", "Hodgkins", "Pentax")
+            //};
+            //foreach (var moving in moveableObjects)
+            //{
+            //    Console.WriteLine(moving.Move());
+            //}
+
+            Camera pentax = new Camera("Pentax");
+            WaterPistol pistol = new WaterPistol("Supersoaker");
+            LaserGun laserGun = new LaserGun("Acme");
+            Hunter nish = new Hunter("Nish", "Mandal", pentax);
+            Console.WriteLine(nish.Shoot());
+            nish.Shooter = pistol;
+            Console.WriteLine(nish.Shoot());
+            nish.Shooter = laserGun;
+            Console.WriteLine(nish.Shoot());
+            nish.Shooter = pistol;
+            Console.WriteLine(nish.Shoot());
+
+        }
+
+        public static void SpartaWrite(object obj)
+        {
+            Console.WriteLine(obj.ToString());
+            if (obj is Hunter)
+            {
+                var hunterObj = (Hunter)obj;
+                Console.WriteLine(hunterObj.Shoot());
+            }
         }
         public struct Point3D
         {
@@ -46,7 +121,7 @@ namespace SafariParkApp
                 this.z = z;
             }
         }
-        static void DemoMethod(Point3D pt, Person p)
+        static void demomethod(Point3D pt, Person p)
         {
             pt.y = 1000;
             p.Age = 92;
